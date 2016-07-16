@@ -1,0 +1,75 @@
+package Game;
+
+import java.applet.AudioClip;
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Frame extends JFrame {
+	Ball ball ;
+	Screen screen;
+	AudioClip sound;
+	URL url;
+	public Frame() throws Exception {
+	
+		super("BahaGame");	
+		setLayout(null);
+		setSize(500,500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		setResizable(false);
+		setVisible(true);
+		this.setFocusable(true);
+		
+	
+		BufferedImage image = ImageIO.read(Frame.class.getClassLoader().getResourceAsStream("Game/Blue_ball.png"));
+		Ball ball = new Ball(image,200,200,900,1000);
+		
+		screen = new Screen(ball);
+		
+		this.setFocusable(true);
+		screen.setBounds(0,0,500,500);
+		add(screen);
+		long befor = System.currentTimeMillis();
+		
+		while(true){
+			System.out.println("this is before"+ befor);
+			long after = System.currentTimeMillis();
+			System.out.println("After Time "+after);
+			float time = (float)(after - befor)/1000;
+			System.out.println(time);
+			befor = after;
+			ball.update(time);
+			screen.repaint();
+			Thread.sleep(20);
+			if(ball.getX() == 300){
+				sound.play();
+			}
+		}
+
+	
+}
+public class Screen extends JLabel{
+	Ball ball;
+	public Screen(Ball ball ){
+	this.ball = ball;
+		
+	}
+	public void paintComponent(Graphics g){
+		g.drawImage(ball.getImage(), (int)ball.getX(),(int)ball.getY(), null);
+		
+	}
+	
+	}
+	
+}

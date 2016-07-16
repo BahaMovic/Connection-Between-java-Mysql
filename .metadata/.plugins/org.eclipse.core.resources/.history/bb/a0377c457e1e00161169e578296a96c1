@@ -1,0 +1,74 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.QuadCurve;
+
+
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			Group root = new Group();
+			Line line1 = new Line();
+			line1.setStartX(150);
+			line1.setStartY(50);
+			line1.setEndX(300);
+			line1.setEndY(50);
+			Line line2 = new Line();
+			line2.setStartX(150);
+			line2.setStartY(50);
+			line2.setEndX(20);
+			line2.setEndY(200);
+			
+			Line line3 = new Line();
+			line3.setStartX(300);
+			line3.setStartY(50);
+			line3.setEndX(430);
+			line3.setEndY(200);
+			
+			QuadCurve quad = new QuadCurve();
+			quad.setStartX(20);
+			quad.setStartY(200);
+			quad.setControlX(225);
+			quad.setControlY(100);
+			quad.setEndX(430);
+			quad.setEndY(200);
+			quad.setFill(Color.BROWN);
+			quad.setStroke(Color.BROWN);
+			
+			Ellipse face = new Ellipse();
+			face.setFill(Color.YELLOW);
+			face.setStroke(Color.BLUE);
+			face.setCenterX(225);
+			face.setCenterY(300);
+			face.setRadiusX(100);
+			face.setRadiusY(100);
+			
+			Ellipse eye1 = new Ellipse();
+			eye1.setCenterY(200);
+			eye1.setCenterX(150);
+			eye1.setRadiusX(5);
+			eye1.setRadiusY(10);
+			eye1.setStroke(Color.BLACK);
+			eye1.setFill(Color.WHITE);
+			root.getChildren().addAll(line1,line2,line3,quad,face , eye1);
+			
+			Scene scene = new Scene(root,500,400);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

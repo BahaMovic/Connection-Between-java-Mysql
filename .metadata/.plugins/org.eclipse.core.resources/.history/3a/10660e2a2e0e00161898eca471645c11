@@ -1,0 +1,15 @@
+package application;
+import javafx.beans.property.*;
+public class myNumber {
+private double number;
+
+public double getNumber() {
+	
+	return number;
+}
+
+public void setNumber(double number) {
+	this.number = number;
+}
+
+}

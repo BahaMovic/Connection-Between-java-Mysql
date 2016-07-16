@@ -1,0 +1,40 @@
+import java.awt.Graphics;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Enemymang {
+	Game game ;
+	List<Enemy> enemies = new ArrayList<Enemy>();
+	int amount;
+	public Enemymang(Game game , int a){
+		this.game = game;
+		amount = a;
+		swamp();
+	}
+	public void swamp(){
+		Random random = new Random();
+		int ss = enemies.size();
+		if(ss<amount){
+			for(int i=0 ; i<amount -ss ;i++){
+			enemies.add(new Enemy(game,random.nextInt(800),10));
+		}
+			}else if(ss>amount){
+				for(int x=0 ; x<ss-amount ;x++){
+					enemies.get(0);
+				}
+			}
+		
+	}
+	public void draw(Graphics g){
+		for(Enemy e : enemies){
+			e.draw(g);
+		}
+		
+	}
+	public void update(){
+		
+	}
+
+}

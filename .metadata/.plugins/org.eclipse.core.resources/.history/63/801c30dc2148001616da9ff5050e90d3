@@ -1,0 +1,8 @@
+package Objects;
+
+public class Friends extends FaceBookList{
+
+	public Friends(String email, String password) {
+
+
+}

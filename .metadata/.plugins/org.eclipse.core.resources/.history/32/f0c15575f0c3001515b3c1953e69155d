@@ -1,0 +1,17 @@
+import java.awt.Dimension;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+public class FormPanel extends JPanel{
+	JTextField txname , txdepartment;
+	JLabel labname , labdepartment;
+	JButton btn;
+public FormPanel(){
+	Dimension dim = this.getPreferredSize();
+	dim.width = 220;
+	setPreferredSize(dim);
+	Border inter = BorderFactory.createTitledBorder("Add Person");
+	Border outer = BorderFactory.createEmptyBorder(5,5,5,5);
+	setBorder(BorderFactory.createCompoundBorder(outer, inter));
+}
+}

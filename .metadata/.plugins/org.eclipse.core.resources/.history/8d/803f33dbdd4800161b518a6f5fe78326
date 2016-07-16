@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="455.0" prefWidth="668.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="132.0" layoutY="30.0" text="Name">
+         <font>
+            <Font name="Lucida Console" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="64.0" prefHeight="22.0" prefWidth="54.0" text="Friends">
+         <font>
+            <Font name="Goudy Old Style Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="64.0" prefHeight="22.0" prefWidth="54.0" text="0">
+         <font>
+            <Font name="Goudy Old Style Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="86.0" prefHeight="22.0" prefWidth="54.0" text="Groups">
+         <font>
+            <Font name="Goudy Old Style Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="181.0" layoutY="86.0" prefHeight="22.0" prefWidth="54.0" text="0">
+         <font>
+            <Font name="Goudy Old Style Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

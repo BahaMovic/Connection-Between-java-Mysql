@@ -1,0 +1,22 @@
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+public class MainFrame extends JFrame{
+	JTextArea tx;
+	JButton btn;
+	public MainFrame(){
+		setLayout(new BorderLayout());
+		tx = new JTextArea();
+		btn = new JButton("Click me ");
+		
+		setSize(500,400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+	}
+	
+
+}

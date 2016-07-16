@@ -1,0 +1,14 @@
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class TextPanel extends JPanel{
+	JTextArea tx;
+	public TextPanel(){
+		tx = new JTextArea();
+		setLayout(new BorderLayout());
+		add(new JScrollPane(tx), BorderLayout.CENTER);
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class Problem1 {
+	Coin[] coin;
+	public Coin[] SetCoins(int Size){
+		coin = new Coin[Size];
+		for(int i=0;i<coin.length ; i++){
+			coin[i].setPosition(i);
+			coin[i].setWeight(5);
+		}
+		int random =(int) (Math.random()*Size);
+		System.out.println("The Fake coin in "+random);
+		coin[random].setWeight(4);
+	}
+	
+public static void main(String[] args){
+}
+}

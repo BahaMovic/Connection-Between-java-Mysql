@@ -1,0 +1,5 @@
+package application;
+
+public class myNumber {
+private double number;
+}

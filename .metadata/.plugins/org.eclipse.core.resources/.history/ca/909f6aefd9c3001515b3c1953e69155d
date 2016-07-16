@@ -1,0 +1,16 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+public class MainFrame extends JFrame{
+	JTextArea tx;
+	JButton btn;
+	public MainFrame(){
+		setLayout(new BorderLayout());
+		tx = new JTextArea();
+		btn = new JButton("Click me ");
+		
+	}
+	
+
+}

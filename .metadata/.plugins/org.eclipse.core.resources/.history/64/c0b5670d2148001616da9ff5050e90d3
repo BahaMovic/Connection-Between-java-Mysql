@@ -1,0 +1,14 @@
+package Objects;
+
+import javafx.collections.ObservableList;
+
+public class FaceBookList {
+	protected ObservableList<Friends> friends;
+	protected ObservableList<GroupJoiner> groupJoiner;
+	protected ObservableList<Groups> groupList;
+	protected int max = 5 ;
+	protected int min = 1 ;
+	protected LocalDate date;
+	
+
+}

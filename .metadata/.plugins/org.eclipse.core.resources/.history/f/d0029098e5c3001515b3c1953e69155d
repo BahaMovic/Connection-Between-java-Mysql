@@ -1,0 +1,35 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+public class ToolBar extends JPanel implements ActionListener{
+	
+	JButton btn1;
+	JButton btn2;
+	private TextPanel panel;
+	public ToolBar(){
+		btn1 = new JButton("Hello");
+		btn2 = new JButton("GoodBye");
+		
+		btn1.addActionListener(this);
+		btn2.addActionListener(this);
+		setLayout(new FlowLayout(FlowLayout.LEFT));
+		add(btn1);
+		add(btn2);
+	}
+	public void setTextpane(TextPanel x) {
+		panel = x;
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		JButton Clicked = (JButton) e.getSource();
+		if(Clicked == btn1){
+			panel.appendText("Hello\n");
+		}else if(Clicked == btn2){
+			panel.appendText("GoodBye\n");
+		}
+		
+	}
+
+}

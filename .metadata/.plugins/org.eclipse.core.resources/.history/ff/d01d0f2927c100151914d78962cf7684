@@ -1,0 +1,30 @@
+
+import java.awt.*;
+import javax.swing.*;
+public class Games extends JFrame{
+	static int x , y;
+	static JButton btn1, btn2;
+	static JLabel lab1 , lab2, lab3;
+	static JTextField tx;
+	public Games(){
+		setSize(400,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		lab1 = new JLabel("Enter your number from 1 -5");
+		add(lab1);
+		
+		tx = new JTextField(5);
+		add(tx);
+		
+		lab2 = new JLabel("");
+		add(lab2);
+		
+		lab3 = new JLabel("");
+		
+		
+	}
+	public static void main(String[] args){
+		
+	}
+
+}

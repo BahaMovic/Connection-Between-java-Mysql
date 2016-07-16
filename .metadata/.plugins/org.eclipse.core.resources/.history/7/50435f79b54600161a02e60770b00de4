@@ -1,0 +1,25 @@
+package application;
+
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+
+import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+
+
+public class Controller  implements Initializable {
+	 @FXML
+	    private AnchorPane main;
+
+	    @FXML
+	    private JFXHamburger button;
+
+	    @FXML
+	    private JFXDrawer drawer;
+
+		@Override
+	
+
+}

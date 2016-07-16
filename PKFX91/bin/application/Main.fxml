@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="close" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#Close" text="Exit" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox fx:id="cb1" layoutX="85.0" layoutY="106.0" mnemonicParsing="false" onAction="#Action" text="Green" />
+            <CheckBox fx:id="cb2" layoutX="85.0" layoutY="148.0" mnemonicParsing="false" onAction="#Action" text="Red" />
+            <CheckBox fx:id="cb3" layoutX="85.0" layoutY="188.0" mnemonicParsing="false" onAction="#Action" text="Blue" />
+            <CheckBox fx:id="cb4" layoutX="85.0" layoutY="228.0" mnemonicParsing="false" onAction="#Action" text="Yellow" />
+            <Label fx:id="list" layoutX="340.0" layoutY="87.0" prefHeight="184.0" prefWidth="172.0" />
+            <Label fx:id="mcount" layoutX="85.0" layoutY="293.0" prefHeight="44.0" prefWidth="229.0" />
+            <RadioButton fx:id="rad1" layoutX="200.0" layoutY="106.0" mnemonicParsing="false" onAction="#Action1" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gogo" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rad2" layoutX="200.0" layoutY="148.0" mnemonicParsing="false" onAction="#Action1" text="Female" toggleGroup="$gogo" />
+            <Label fx:id="lab" layoutX="203.0" layoutY="188.0" prefHeight="17.0" prefWidth="63.0" text=" " />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

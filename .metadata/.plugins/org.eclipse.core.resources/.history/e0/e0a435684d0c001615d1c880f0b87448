@@ -1,0 +1,29 @@
+package application;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+
+public class MainController implements Initializable{
+	@FXML ComboBox<String> Combo;
+	@FXML Label myLab;
+	ObservableList<String> list = FXCollections.observableArrayList("Bahaa","Alaa","Diaa","Doha","Mohamed","Mona");
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		Combo.setItems(list);
+		
+	}
+	public void Star(ActionEvent event){
+		myLab.setText(Combo.getValue());
+		
+	}
+
+}

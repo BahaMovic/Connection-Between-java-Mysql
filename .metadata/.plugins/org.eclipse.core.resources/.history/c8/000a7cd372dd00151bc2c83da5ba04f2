@@ -1,0 +1,48 @@
+package test;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+public class test extends JFrame{
+	JButton btn;
+	JLabel lab;
+	Date d;
+	JTable tb;
+	public test(){
+		btn = new JButton("OK");
+		setSize(600,300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(new FlowLayout());
+		d= new Date();
+		lab = new JLabel(new Date().toString());
+		String[] st1 = {"Name","ID","Department"};
+		String[][] str2 = {
+				{"Bahaa Eldin Mohamed","4124","I Love Java"},
+				{"Aymen Shaaban Abd Elwahd","4919","CCNA"}
+				};
+		tb= new JTable(str2,st1);
+		add(tb);
+		add(btn);
+		btn.addActionListener(new action());
+		
+		
+	}
+	
+	public static void main(String[] args){
+		test t = new test();
+		t.setVisible(true);
+		
+	}
+	private class action implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			
+			System.out.println("Closed !!");
+			
+		}
+		
+	}
+
+}

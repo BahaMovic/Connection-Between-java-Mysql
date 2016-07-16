@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="604.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <JFXDrawer fx:id="drawer" layoutX="-1.0" layoutY="-1.0" prefHeight="604.0" prefWidth="204.0" />
+      <HBox alignment="CENTER_RIGHT" layoutX="257.0" layoutY="14.0" prefHeight="113.0" prefWidth="675.0" style="-fx-border-width: 1px; -fx-border-color: #A6A6A6;">
+         <children>
+            <Label prefHeight="39.0" prefWidth="176.0" text="LooperFB" textFill="#6c5b9a">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Lucida Console" size="36.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="email" promptText="Email">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" promptText="Password">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXPasswordField>
+            <JFXButton onAction="#Login" style="-fx-background-color: #6c5b9a;" text="Login" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXHamburger fx:id="button" alignment="CENTER_RIGHT" prefHeight="3.0" prefWidth="29.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+      <SubScene fx:id="Border" height="451.0" layoutX="257.0" layoutY="138.0" width="675.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+   </children>
+</AnchorPane>

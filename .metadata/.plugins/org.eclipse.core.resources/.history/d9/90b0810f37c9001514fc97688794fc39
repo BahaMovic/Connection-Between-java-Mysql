@@ -1,0 +1,22 @@
+import java.awt.Graphics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Enemymang {
+	Game game ;
+	List<Enemy> enemies = new ArrayList<Enemy>();
+	int amount;
+	public Enemymang(Game game , int a){
+		this.game = game;
+		amount = a;
+		swamp();
+	}
+	public void swamp(){
+		
+	}
+	public void draw(Graphics g){
+		
+	}
+
+}

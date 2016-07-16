@@ -1,0 +1,32 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Game extends JPanel implements keyListener{
+	int x = 5;
+	int y =5 ;
+	public Game(){
+		
+		setPreferredSize(new Dimension(500,400));
+	}
+	public void paint(Graphics g){
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, getWidth(), getHeight());
+		g.setColor(Color.yellow);
+		g.fillOval(x, y, 100, 50);
+		repaint();
+	}
+	
+	public static void main(String[] args){
+		
+		JFrame frame = new JFrame();
+		frame.setSize(new Dimension(500,400));
+		frame.add(new Game());
+		frame.setPreferredSize(new Dimension(500,400));
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.pack();
+		frame.setResizable(false);
+		frame.setVisible(true);
+	}
+
+}

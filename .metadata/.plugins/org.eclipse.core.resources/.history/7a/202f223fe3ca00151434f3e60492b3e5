@@ -1,0 +1,36 @@
+import java.awt.DisplayMode;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Window;
+
+import javax.swing.JFrame;
+
+public class Screen {
+GraphicsDevice gd;
+public Screen(){
+	GraphicsEnvironment gvn = GraphicsEnvironment.getLocalGraphicsEnvironment();
+	gd = gvn.getDefaultScreenDevice();
+}
+public void setFullScreen(DisplayMode dm , JFrame w){
+	w.setResizable(false);
+	w.setUndecorated(true);
+	gd.setFullScreenWindow(w);
+	
+		if(dm != null && gd.isDisplayChangeSupported()){
+			try{
+			gd.setDisplayMode(dm);
+		}catch(Exception e){}
+	}
+	
+}
+public Window getFullScreenWindo(){
+	return gd.getFullScreenWindow();
+}
+public void restorescreen(){
+	Window w = gd.getFullScreenWindow();
+	if (w != null){
+		w.dispose();
+	}
+	gd.setFullScreenWindow(null);
+}
+}

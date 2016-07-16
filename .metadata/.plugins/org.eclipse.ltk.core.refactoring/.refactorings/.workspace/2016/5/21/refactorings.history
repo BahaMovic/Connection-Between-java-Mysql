@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete ٢٠ resources" deleteContents="false" description="Delete ٢٠ resources" element1="/Moaaz" element10="/PKFX9" element11="/PKFX91" element12="/PKFX92" element13="/PKFX93" element14="/PKFX94" element15="/PKFX95" element16="/PKFXDB1" element17="/RPKFX1" element18="/RPKFX2" element19="/RPKFX3" element2="/PKFX1" element20="/RPKFX4" element3="/PKFX2" element4="/PKFX3" element5="/PKFX4" element6="/PKFX5" element7="/PKFX6" element8="/PKFX7" element9="/PKFX8" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="20" stamp="1463655112108"/>
+</session>

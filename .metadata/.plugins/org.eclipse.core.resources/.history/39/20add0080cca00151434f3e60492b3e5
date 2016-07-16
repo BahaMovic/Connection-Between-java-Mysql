@@ -1,0 +1,23 @@
+import java.awt.DisplayMode;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+
+public class Screen {
+GraphicsEnvironment gm;
+GraphicsDevice gd;
+private Movic movic;
+
+
+public Screen(){
+	gm = GraphicsEnvironment.getLocalGraphicsEnvironment();
+	gd= gm.getDefaultScreenDevice();
+	setFullScrean(movic);
+}
+public void setFullScrean(Movic move){
+	move.setResizable(false);
+	move.setUndecorated(false);
+	gd.setFullScreenWindow(move);
+	
+}
+
+}

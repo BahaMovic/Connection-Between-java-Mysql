@@ -1,0 +1,12 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
+public class Stage {
+	Rectangle rec = new Rectangle(100,100,100,100);
+public void draw(Graphics g){
+	g.setColor(Color.WHITE);
+	g.fillRect(rec.x, rec.y, rec.width, rec.height);
+	
+}
+}

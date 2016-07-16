@@ -1,0 +1,55 @@
+import java.util.Arrays;
+
+public class tree {
+	private int[] Coin;
+	private int SizeOfArray;
+	private int StartArray = 0;
+	private int EndArray ;
+	private int FakeCoin;
+
+	public tree(int Size){
+		SizeOfArray = Size;
+		Coin = new int[Size];
+		Arrays.fill(Coin, 5);
+		FakeCoin = (int)Math.random()*Size;
+		System.out.println("The Fake Coin before The Operation Found in index number "+FakeCoin);
+		Coin[FakeCoin]=4;
+		
+		EndArray = Size-1;	
+		int MiddleArray;
+		
+		Bahaa :
+		while(true){
+			int part1 = 0;
+			int part2 = 0;
+			MiddleArray=(StartArray+EndArray)/2;
+			System.out.println(" "+MiddleArray+" "+part1);
+		
+			if((EndArray+1-StartArray)%2==0){
+				
+				for(int i =StartArray ; i<MiddleArray;i++){
+					part1 += Coin[i];
+				}
+				for(int x = MiddleArray ; x<=EndArray; x++){
+					part2 += Coin[x];
+				}
+				
+				if(part1<part2 && part2 != 5){
+					EndArray=MiddleArray;
+				}else if(part2<part1 && part1 !=5){
+					StartArray= MiddleArray;
+				}else {
+					System.out.println("The Fake Coin Found In "+MiddleArray );
+				
+				}
+				System.out.println(" "+MiddleArray+" "+part1);
+			}
+			
+		}
+		
+	}public static void main(String[] args){
+		
+			tree x = new tree(20);
+		}
+
+}

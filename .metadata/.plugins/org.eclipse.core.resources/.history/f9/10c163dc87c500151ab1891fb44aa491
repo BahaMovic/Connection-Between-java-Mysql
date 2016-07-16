@@ -1,0 +1,37 @@
+import	javax.swing.*;
+import javax.swing.Timer;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+public class Game extends JFrame{
+	JButton btn;
+	
+	public Game(){
+		setLayout(new BorderLayout());
+		setSize(800,400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		btn.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				Graphi g = new Graphi();
+				add(g);
+				TimeClass timeClass = new TimeClass(0);
+				Timer t = new Timer(100,timeClass);
+				
+			}
+			
+		});
+		
+		}
+		
+	
+	
+	public static void main(String[] args){
+		
+	}
+
+}

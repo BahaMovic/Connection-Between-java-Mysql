@@ -1,0 +1,9 @@
+
+public class Problem1 {
+	public Coin[] SetCoins(int Size){
+		
+	}
+	
+public static void main(String[] args){
+}
+}

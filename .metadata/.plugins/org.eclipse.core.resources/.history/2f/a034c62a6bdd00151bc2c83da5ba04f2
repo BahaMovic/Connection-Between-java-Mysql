@@ -1,0 +1,13 @@
+package test;
+import javax.swing.*;
+import java.awt.*;
+public class test extends JFrame{
+	public test(){
+		
+	}
+	
+	public static void main(String[] args){
+		
+	}
+
+}

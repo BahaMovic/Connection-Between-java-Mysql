@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="462.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <ListView fx:id="list" layoutX="26.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="104.0" layoutY="295.0" mnemonicParsing="false" onAction="#Click" text="open" />
+      <ProgressBar fx:id="pb" layoutX="306.0" layoutY="70.0" prefWidth="200.0" progress="0.0" />
+      <ProgressIndicator fx:id="pc" layoutX="333.0" layoutY="117.0" prefHeight="123.0" prefWidth="146.0" progress="0.0" />
+      <Button layoutX="453.0" layoutY="298.0" mnemonicParsing="false" onAction="#goo" prefHeight="44.0" prefWidth="52.0" text="+" />
+      <Button layoutX="333.0" layoutY="298.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="52.0" text="-" />
+      <TextField fx:id="text" layoutX="210.0" layoutY="374.0" />
+      <Slider fx:id="slider" layoutX="215.0" layoutY="422.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="286.0" prefWidth="319.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="application.Controller">
+   <children>
+      <Slider fx:id="slider" layoutX="60.0" layoutY="74.0" prefHeight="14.0" prefWidth="219.0" />
+      <TextField fx:id="text" layoutX="85.0" layoutY="118.0" />
+   </children>
+</AnchorPane>

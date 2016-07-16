@@ -1,0 +1,20 @@
+package test;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+public class test extends JFrame{
+	
+	
+	public static void main(String[] args){
+		StringBuilder  s =new StringBuilder("Bahaa Eldin Mohamed");
+		s.setCharAt(5,'z');
+		System.out.println(s);
+		s.insert(2, true);
+		System.out.println(s);
+
+	}
+
+
+}

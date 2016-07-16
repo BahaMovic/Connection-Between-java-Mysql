@@ -1,0 +1,38 @@
+package application;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ProgressIndicator;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
+
+public class Controller implements Initializable{
+	@FXML ListView list;
+	@FXML ProgressBar pb;
+	@FXML ProgressIndicator pc;
+	public void Click(ActionEvent event){
+		FileChooser fc = new FileChooser();
+		fc.getExtensionFilters().addAll(new ExtensionFilter("JPG File","*.jpg"));
+		File file = fc.showOpenDialog(null);
+		list.getItems().add(file.getName());
+	}
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		IntegerProperty x = new SimpleIntegerProperty(0);
+		x.setValue(0);
+		pc.progressProperty().bind(x.));
+
+		
+		
+	}
+	
+
+}

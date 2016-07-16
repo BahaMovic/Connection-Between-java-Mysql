@@ -1,0 +1,12 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Game {
+	
+	public static void main(){
+		
+		JFrame frame = new JFrame();
+		frame.setSize(new Dimension(500,400));
+	}
+
+}

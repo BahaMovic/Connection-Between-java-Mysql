@@ -1,0 +1,75 @@
+import java.util.Arrays;
+
+public class Problem1 {
+	Coin[] coin;
+	public Coin[] SetCoins(int Size){
+		coin = new Coin[Size];
+		for(int i=0;i<Size ; i++){
+			
+			coin[i].setWeight(5);
+		}
+		int random =(int) (Math.random()*Size);
+		System.out.println("The Fake coin in "+random);
+		coin[random].setWeight(4);
+		return coin;
+	}
+	public int Condition(Coin[] left , Coin[] mid , Coin[] right){
+		int LeftTree = 0, RightTree = 0, MidTree = 0;
+		for(int x = 0 ; x<left.length ; x++){
+			LeftTree += left[x].getWeight();
+			
+		}
+		for(int y = 0 ; y<right.length ; y++){
+			RightTree += right[y].getWeight();
+			
+		}
+		for(int z = 0 ; z<mid.length ; z++){
+			MidTree += mid[z].getWeight();
+			
+		}
+		if(LeftTree<RightTree)return -1;
+		
+		else if(LeftTree>RightTree) return 1;
+		
+		else return 0;
+	}
+	
+	
+	public int FindFakeCoin(Coin[] coin){
+
+		 if(coin.length == 0) return -1; 
+		  else if(coin.length == 1) return coin[0].getPosition(); 
+		  else{
+		 boolean oddNumCoins = coin.length % 3 == 1;
+		int middle1 =  coin.length/3;
+		int middle2 = (coin.length*2)/3;
+		Coin[] leftCoin = Arrays.copyOfRange(coin, 0,middle1);
+		Coin[] midlCoin = Arrays.copyOfRange(coin, middle1, middle2);
+		Coin[] rightCoin = Arrays.copyOfRange(coin , middle2,coin.length);
+		
+		int x = Condition(leftCoin,midlCoin,rightCoin);
+		
+		if(x==-1){
+			return FindFakeCoin(leftCoin);
+		}else if(x==0){
+			return FindFakeCoin(midlCoin);
+		}else if(x == 1){
+			return FindFakeCoin(rightCoin);
+		}
+		else if(oddNumCoins) return coin[coin.length-1].getPosition();
+		
+		else{
+			return -1;
+		}
+		
+		  }
+	}
+	
+public static void main(String[] args){
+	Problem1 x = new Problem1();
+	Coin[] coin =x.SetCoins(90);
+	int Fake = x.FindFakeCoin(coin);
+	System.out.println("The Fake Coin Found in "+Fake);
+	
+}
+}

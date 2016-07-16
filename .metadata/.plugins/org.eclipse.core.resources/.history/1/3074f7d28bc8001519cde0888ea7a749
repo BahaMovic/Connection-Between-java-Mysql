@@ -1,0 +1,6 @@
+
+public class Entity {
+	protected int x ,y, w ,h;
+	protected boolean remove = false'
+
+}

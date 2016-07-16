@@ -1,0 +1,17 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Movic extends JFrame{
+	public Movic(){
+		Screen sc = new Screen();
+		sc.setFullScrean(this);
+		GraphicsEnvironment gm;
+		GraphicsDevice gd;
+		gd = gm.getDefaultScreenDevice();
+		
+	}
+	public static void main(String[] args){
+		new Movic().setVisible(true);
+	}
+
+}

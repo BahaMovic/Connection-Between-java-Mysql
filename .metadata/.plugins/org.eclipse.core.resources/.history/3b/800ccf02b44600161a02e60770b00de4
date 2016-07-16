@@ -1,0 +1,13 @@
+package application;
+
+public class Controller {
+	 @FXML
+	    private AnchorPane main;
+
+	    @FXML
+	    private JFXHamburger button;
+
+	    @FXML
+	    private JFXDrawer drawer;
+
+}

@@ -1,0 +1,55 @@
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+public class FormPanel extends JPanel{
+	JTextField txname , txdepartment;
+	JLabel labname , labdepartment;
+	JButton btn;
+public FormPanel(){
+	Dimension dim = this.getPreferredSize();
+	dim.width = 220;
+	setPreferredSize(dim);
+	
+	txname = new JTextField(10);
+	txdepartment = new JTextField(10);
+	labname = new JLabel("Name : ");
+	labdepartment = new JLabel("Department : ");
+	btn= new JButton("OK");
+	
+	Border inter = BorderFactory.createTitledBorder("Add Person");
+	Border outer = BorderFactory.createEmptyBorder(5,5,5,5);
+	setBorder(BorderFactory.createCompoundBorder(outer, inter));
+	
+	setLayout(new GridBagLayout());
+	GridBagConstraints gc = new GridBagConstraints();
+	gc.gridx = 0;
+	gc.gridy = 0;
+	gc.anchor = GridBagConstraints.LINE_END;
+	gc.weightx = 1 ;
+	gc.weighty = 1;
+	
+	add(labname , gc);
+	gc.anchor = GridBagConstraints.LINE_START;
+	gc.gridx = 1;
+	gc.gridy = 0;
+	
+	add(txname,gc);
+	gc.anchor = GridBagConstraints.LINE_END;
+	gc.gridx = 0;
+	gc.gridy = 1;
+	add(labdepartment,gc);
+	gc.anchor = GridBagConstraints.LINE_STARTl
+	gc.gridx =1 ;
+	gc.gridy = 1;
+	
+	add(txdepartment,gc);
+	
+	gc.gridx = 1;
+	gc.gridy = 3;
+	add(btn,gc);
+	
+}
+}

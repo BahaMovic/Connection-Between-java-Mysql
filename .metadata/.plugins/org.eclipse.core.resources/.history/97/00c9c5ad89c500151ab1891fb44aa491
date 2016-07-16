@@ -1,0 +1,21 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.*;
+
+public class Graphi extends JPanel{
+	int y ;
+	public void paint(Graphics g){
+		super.paint(g);
+		setBackground(Color.white);
+		
+		g.setColor(Color.red);
+		g.fillRect(350, 260, 100,100);
+		
+		g.setColor(Color.black);
+		g.fillRect(330, y, 10, 10);
+		
+		
+	}
+
+}

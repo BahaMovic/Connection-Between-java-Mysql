@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class tree {
+	private int[] Coin;
+	private int SizeOfArray;
+	private int StartArray = 0;
+	private int EndArray ;
+	private int FakeCoin;
+
+	public tree(int Size){
+		SizeOfArray = Size;
+		Coin = new int[Size];
+		Arrays.fill(Coin, 5);
+		FakeCoin = (int)Math.random()*Size;
+		System.out.println("The Fake Coin before The Operation Found in index number "+FakeCoin);
+		Coin[FakeCoin]=4;
+		
+		EndArray = Size-1;	
+	}
+}

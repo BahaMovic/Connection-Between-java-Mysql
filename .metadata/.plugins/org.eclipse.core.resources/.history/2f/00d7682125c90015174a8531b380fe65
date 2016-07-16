@@ -1,0 +1,23 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
+public class Enemy extends Entity{
+private Rectangle rec ;
+int ix =0, iy=0;
+private Game game;
+	public Enemy(Game game ,int x, int y) {
+		super(x, y);
+		this.game = game;
+		rec = new Rectangle(x,y,40,40);
+	}
+	public void draw(Graphics g){
+		g.setColor(Color.RED);
+		g.fillRect(rec.x, rec.y, rec.width, rec.height);
+	}
+	public void move(){
+		
+		
+	}
+
+}

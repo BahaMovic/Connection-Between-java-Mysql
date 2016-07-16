@@ -1,0 +1,15 @@
+
+import java.awt.*;
+import javax.swing.*;
+public class Games {
+	static int x , y;
+	static JButton btn1, btn2;
+	
+	public Games(){
+		
+	}
+	public static void main(String[] args){
+		
+	}
+
+}

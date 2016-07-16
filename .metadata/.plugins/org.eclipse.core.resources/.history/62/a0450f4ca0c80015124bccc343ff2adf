@@ -1,0 +1,10 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Stage {
+public void draw(Graphics g){
+	g.setColor(Color.WHITE);
+	g.fillRect(x, y, width, height);
+	
+}
+}

@@ -1,0 +1,20 @@
+package application;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
+
+public class Controller {
+	@FXML CheckBox cb1;
+	@FXML CheckBox cb2;
+	@FXML CheckBox cb3;
+	@FXML CheckBox cb4;
+
+	public void exit(ActionEvent event){
+		System.exit(0);
+	}
+	public void btn(ActionEvent evet)
+	{
+		
+	}
+}

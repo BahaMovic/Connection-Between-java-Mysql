@@ -1,0 +1,39 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
+public class Player extends Entity{
+private int xd , yd;
+private Game game;
+private Rectangle rec;
+	public Player(Game game ,int x, int y) {
+		super(x, y);
+		this.game = game;
+		w = 30;
+		h = 30;
+		rec = new Rectangle(x,y,w,h);
+		
+	}
+	public void draw(Graphics g)
+	{
+		move();
+		if(!game.getStage().isCollided(rec)){
+			yd=0;
+		}else yd=-1;
+		g.setColor(Color.GRAY);
+		g.fillOval(rec.x, rec.y, rec.width, rec.height);
+		
+		
+	}
+	public void move(){
+		rec.x += xd;
+		rec.y += yd;
+	}
+	public void getXD(int value)
+	{
+		xd = value;
+	}public void getYD(int value){
+		yd = value;
+	}
+
+}

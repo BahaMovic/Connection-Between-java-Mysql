@@ -1,0 +1,11 @@
+import java.awt.Graphics;
+
+import javax.swing.*;
+
+public class Graphi extends JPanel{
+	public void paint(Graphics g){
+		super.paint(g);
+		
+	}
+
+}

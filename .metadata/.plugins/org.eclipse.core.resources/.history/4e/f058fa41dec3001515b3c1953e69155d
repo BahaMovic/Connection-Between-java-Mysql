@@ -1,0 +1,7 @@
+import javax.swing.*;
+public class ToolBar extends JPanel{
+	
+	JButton btn1;
+	JButton btn2;
+
+}

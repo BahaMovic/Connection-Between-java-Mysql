@@ -1,0 +1,38 @@
+package Game;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+
+public class Frame extends JFrame {
+	Screen screen  ;
+	Ball ball;
+	BufferedImage image;
+	public Frame(){
+		super("BahaGame");
+		try {
+			image= ImageIO.read(Frame.class.getClassLoader().getResourceAsStream("Game/Blue_ball.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		screen = new Screen(200,200,image);
+		setLayout(null);
+		setSize(500,500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		setResizable(false);
+		setVisible(true);
+		screen.setBounds(0,0,500,500);
+		this.screen.repaint();
+		add(screen);
+		while(true){
+		ball.update();
+		}
+	}
+	
+}

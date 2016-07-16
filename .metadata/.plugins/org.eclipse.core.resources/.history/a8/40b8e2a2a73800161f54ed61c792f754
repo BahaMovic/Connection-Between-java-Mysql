@@ -1,0 +1,59 @@
+import java.sql.*;
+
+import javax.swing.JOptionPane;
+public class Main {
+	static Connection con = null;
+	static PreparedStatement pet;
+	static ResultSet rs;
+	static Statement st ;
+	public static void function(){
+		try{
+			Class.forName("org.sqlite.JDBC");
+			con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\BahaMovic\\Desktop\\Sqlite\\Student.sqlite");
+			
+			if(!con.isClosed()){
+				JOptionPane.showMessageDialog(null,"Connection is opened");
+			}else{
+				JOptionPane.showMessageDialog(null, "Connection is Closed");
+			}
+			}catch(Exception e){
+				System.out.println("Hello "+e);
+			}
+	}
+	public static void quary(){
+		String quary = "select * from Students";
+		try {
+			pet = con.prepareStatement(quary);
+			rs = pet.executeQuery();
+			int x =1;
+			while(rs.next()){
+				
+				System.out.println(rs.getString("name")+" "+rs.getString("ID")+" "+rs.getString("major"));
+			
+			
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	public static void Import(String name ,String major , String program ){
+		String quary = "insert into Students (name , major , program values('"+name+"','"+major+"','"+program+"')";
+		try {
+			st = con.createStatement();
+			st.executeUpdate(quary);
+			JOptionPane.showMessageDialog(null,"This Function is Added");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(null,"This Function isn't Added");
+			e.printStackTrace();
+		}
+	}
+public static void main(String[] args){
+	function();
+	quary();
+}
+}

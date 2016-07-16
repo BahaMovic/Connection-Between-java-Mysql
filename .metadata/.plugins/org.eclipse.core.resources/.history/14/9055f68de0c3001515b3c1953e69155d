@@ -1,0 +1,20 @@
+import java.awt.FlowLayout;
+
+import javax.swing.*;
+public class ToolBar extends JPanel{
+	
+	JButton btn1;
+	JButton btn2;
+	private TextPanel panel;
+	public ToolBar(){
+		btn1 = new JButton("Hello");
+		btn2 = new JButton("GoodBye");
+		setLayout(new FlowLayout(FlowLayout.LEFT));
+		add(btn1);
+		add(btn2);
+	}
+	public void setTextpane(TextPanel x) {
+		panel = x;
+	}
+
+}

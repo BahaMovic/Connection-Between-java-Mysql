@@ -1,0 +1,30 @@
+package application;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
+public class Controller implements Initializable{
+	@FXML Label mylab;
+	myNumber num;
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		num.setNumber(0);
+		num.myNumber().addListener(new ChangeListener<Object>(){
+
+			@Override
+			public void changed(ObservableValue<? extends Object> observable, Object oldValue, Object newValue) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+	}
+	
+
+}

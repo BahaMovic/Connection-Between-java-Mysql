@@ -1,0 +1,22 @@
+import java.sql.*;
+public class Maini {
+	static Connection con = null;
+	static Statement st = null;
+	static ResultSet rs= null;
+	public static void main(String[] args){
+		try {
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3206/via","BahaMovic","123123");
+			String query = "select * from department";
+			st = con.createStatement();
+			rs = st.executeQuery(query);
+			while(rs.next()){
+				System.out.println(rs.getString("name"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

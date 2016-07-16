@@ -1,0 +1,178 @@
+package application;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXDrawersStack;
+import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.SubScene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+
+public class Controller implements Initializable{
+
+    @FXML
+    private JFXHamburger button;
+
+    @FXML
+    private JFXDrawer drawer;
+
+    @FXML
+    private SubScene Border;
+    
+    @FXML
+    private JFXTextField email;
+
+    @FXML
+    private JFXPasswordField password;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated metho
+		
+		try {
+			VBox box = FXMLLoader.load(getClass().getResource("/GUI/MenuBar.fxml"));
+			AnchorPane Border12 = FXMLLoader.load(getClass().getResource("/GUI/Home.fxml"));
+			Border.setRoot(Border12);
+			for(Node node : box.getChildren()){
+				
+				if(node.getAccessibleText()!=null){
+					System.out.println("Hello");
+					node.addEventHandler(MouseEvent.MOUSE_CLICKED, (e)->{
+						switch(node.getAccessibleText()){
+						case "Home":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/Home.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "GroupJoiner":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/GroupJoiner.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "GroupPoster":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/GroupPoster.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "GroupImage":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/GroupImage.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "FriendIviinte":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/FriendIvinte.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "GroupLink":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/GroupLink.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "MessageFriend":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/FriendMessage.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "Option":try {
+							AnchorPane Border1 = FXMLLoader.load(getClass().getResource("/GUI/Option.fxml"));
+							Border.setRoot(Border1);
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						break;
+						case "Exit":
+							System.exit(0);
+						
+						
+						break;
+						}
+						
+							
+					
+						System.out.println("Done !");
+					});
+				}
+				
+			}
+		
+		HamburgerBackArrowBasicTransition task = new HamburgerBackArrowBasicTransition(button);
+		task.setRate(-1);
+		drawer.open();
+		drawer.setSidePane(box);
+		button.addEventHandler(MouseEvent.MOUSE_PRESSED, (e)->{
+			task.setRate(task.getRate()*-1);
+			task.play();
+			if(drawer.isShown()){
+				drawer.close();
+			}else{
+				drawer.open();
+			}
+		});
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+	}
+
+}

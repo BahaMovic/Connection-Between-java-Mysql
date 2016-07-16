@@ -1,0 +1,38 @@
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+public class MainFrame extends JFrame{
+	TextPanel tx;
+	JButton btn;
+	public MainFrame(){
+		super("I Love Java");
+		setLayout(new BorderLayout());
+		
+		tx = new TextPanel();
+		btn = new JButton("Click me ");
+		
+		btn.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+			tx.appendText("Hello\n");
+				
+			}
+			
+		});
+		
+		add(tx, BorderLayout.CENTER);
+		add(btn,BorderLayout.SOUTH);
+		setSize(500,400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+	}
+	
+
+}

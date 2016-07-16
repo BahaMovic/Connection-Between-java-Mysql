@@ -1,0 +1,12 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.*;
+
+public class Graphi extends JPanel{
+
+	public Graphi(){
+		super("Colort");
+	}
+
+}

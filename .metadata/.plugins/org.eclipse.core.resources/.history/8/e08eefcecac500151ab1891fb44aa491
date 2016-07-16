@@ -1,0 +1,13 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.*;
+
+public class Graphi extends JPanel{
+
+	public void Compom(Graphics g){
+		super.Graphi(g);
+		
+	}
+
+}

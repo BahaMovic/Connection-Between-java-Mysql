@@ -1,0 +1,28 @@
+import	javax.swing.*;
+import javax.swing.Timer;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.*;
+public class Game extends JFrame {
+	JButton btn;
+	Color color ;
+	public Game(){
+		
+		setSize(600,300);
+		setLayout(new BorderLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		btn = new JButton("Change Color");
+		
+	}
+			
+		
+		
+	
+	
+	public static void main(String[] args){
+		
+	}
+
+}

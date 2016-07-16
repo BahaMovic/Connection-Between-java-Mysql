@@ -1,0 +1,18 @@
+import	javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Game extends JFrame{
+	JButton btn;
+	
+	public Game(){
+		setLayout(new BorderLayout()){
+			
+		}
+		
+	}
+	
+	public static void main(String[] args){
+		
+	}
+
+}

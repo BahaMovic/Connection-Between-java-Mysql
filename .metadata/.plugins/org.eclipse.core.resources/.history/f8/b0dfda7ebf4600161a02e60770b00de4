@@ -1,0 +1,15 @@
+package application;
+
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+import javafx.fxml.FXML;
+
+public class Controller {
+
+    @FXML
+    private JFXHamburger button;
+
+    @FXML
+    private JFXDrawer drawer;
+
+}

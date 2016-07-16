@@ -1,0 +1,24 @@
+package Game;
+
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JPanel;
+
+public class Screen extends JPanel{
+	BufferedImage image ;
+	int x,y;
+	Ball ball;
+	public Screen(int x , int y , BufferedImage image){
+	this.image = image ;
+	this.x = x;
+	this.y = y;
+	ball = new Ball(image,x,y);
+	}
+	public void paintComponent(Graphics g){
+		
+		g.drawImage(ball.getImage(), ball.getX(), ball.getY(), null);
+	}
+
+
+}

@@ -1,0 +1,11 @@
+
+public class Player extends Entity{
+int xd , yd;
+	public Player(int x, int y) {
+		super(x, y);
+		w = 16 ;
+		h = 16;
+	}
+	
+
+}

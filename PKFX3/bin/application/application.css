@@ -1,0 +1,31 @@
+
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#btn{
+	-fx-font-size:20px;
+	-fx-border-radius:50%;
+	-fx-border-width:20px 19px;
+	-fx-color:gray;
+	-fx-padding:20px;
+	-fx-size:20px;
+	-fx-background-radius: 15 15 15 15;
+	
+	
+	
+}
+#btn:hover{
+	-fx-stroke-width:100px;
+	-fx-color:blue;
+	-fx-rotate:10;
+	
+}
+
+Button{
+	-fx-font-family:aria;
+}
+.root{
+-fx-background-image:url("natural-lake-view-in-multicolor-forest.jpg") no_repeat;	
+}
+#myLab{
+	-fx-background:white;
+}

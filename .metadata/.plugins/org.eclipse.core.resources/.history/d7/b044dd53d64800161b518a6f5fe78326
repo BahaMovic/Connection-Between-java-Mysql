@@ -1,0 +1,36 @@
+package Objects;
+
+import java.time.LocalDate;
+
+import org.openqa.selenium.WebDriver;
+
+import javafx.collections.ObservableList;
+import javafx.scene.image.ImageView;
+
+public class FaceBookList {
+	protected ObservableList<Friends> friends;
+	protected ObservableList<GroupJoiner> groupJoiner;
+	protected ObservableList<Groups> groupList;
+	protected int max = 5 ;
+	protected int min = 1 ;
+	protected LocalDate date;
+	protected ImageView profilePic;
+	protected String profileName;
+	protected WebDriver driver ;
+public FaceBookList(){
+		
+	}
+
+public FaceBookList(String email,String password){
+	
+}
+	public void setFriends(ObservableList<Friends> friends){
+		this.friends = friends;
+	}
+	public void setGroups(ObservableList<Groups> Groups){
+		this.groupList = Groups;
+	}
+	
+	
+
+}

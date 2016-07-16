@@ -1,0 +1,51 @@
+package Objects;
+
+import java.io.File;
+import java.time.LocalDate;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import javafx.collections.ObservableList;
+import javafx.scene.image.ImageView;
+
+public class FaceBookList {
+	protected ObservableList<Friends> friends;
+	protected ObservableList<GroupJoiner> groupJoiner;
+	protected ObservableList<Groups> groupList;
+	protected int max = 5 ;
+	protected int min = 1 ;
+	protected LocalDate date;
+	protected ImageView profilePic;
+	protected String profileName;
+	protected WebDriver driver ;
+public FaceBookList(){
+		
+	}
+
+public FaceBookList(String email,String password){
+	 File file = new File("C:\\Program Files (x86)\\Microsoft Web Driver\\MicrosoftWebDriver.exe");
+	 System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
+	
+	 driver  = new EdgeDriver();
+	 
+	 driver.get("http://www.facebook.com/");
+}
+	public void setFriends(ObservableList<Friends> friends){
+		this.friends = friends;
+	}
+	public void setGroups(ObservableList<Groups> Groups){
+		this.groupList = Groups;
+	}
+	public void wait(int min){
+		try {
+			Thread.sleep(min*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+
+}

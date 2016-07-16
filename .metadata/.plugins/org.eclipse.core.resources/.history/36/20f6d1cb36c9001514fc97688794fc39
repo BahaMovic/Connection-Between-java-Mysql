@@ -1,0 +1,14 @@
+
+public class Enemymang {
+	Game game ;
+	int amount;
+	public Enemymang(Game game , int a){
+		this.game = game;
+		amount = a;
+		swamp();
+	}
+	public void swamp(){
+		
+	}
+
+}

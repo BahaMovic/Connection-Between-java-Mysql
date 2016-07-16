@@ -1,0 +1,83 @@
+package application;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXDrawersStack;
+import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.SubScene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+
+public class Controller implements Initializable{
+
+    @FXML
+    private JFXHamburger button;
+
+    @FXML
+    private JFXDrawer drawer;
+
+    @FXML
+    private SubScene Border;
+ 
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated metho
+	
+		try {
+			VBox box = FXMLLoader.load(getClass().getResource("MenuBar.fxml"));
+			
+			for(Node node : box.getChildren()){
+				
+				if(node.getAccessibleText()!=null){
+					System.out.println("Hello");
+					node.addEventHandler(MouseEvent.MOUSE_CLICKED, (e)->{
+						
+						try {
+							Border = FXMLLoader.load(getClass().getResource("MenuBar.fxml"));
+						
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+							
+					
+						System.out.println("Done !");
+					});
+				}
+				
+			}
+		
+		HamburgerBackArrowBasicTransition task = new HamburgerBackArrowBasicTransition(button);
+		task.setRate(-1);
+		drawer.open();
+		drawer.setSidePane(box);
+		button.addEventHandler(MouseEvent.MOUSE_PRESSED, (e)->{
+			task.setRate(task.getRate()*-1);
+			task.play();
+			if(drawer.isShown()){
+				drawer.close();
+			}else{
+				drawer.open();
+			}
+		});
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Game {
+	int roun = 1, rand1 , rand2, rand3 ,rand4;
+	JLabel first , second , third , fourth , or , windo;
+	JButton btn;
+	
+
+}

@@ -1,0 +1,48 @@
+package application;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+
+public class Controller implements Initializable{
+
+    @FXML
+    private JFXHamburger hamburger;
+
+    @FXML
+    private JFXDrawer drawer;
+    VBox box ;
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+	try {
+		box = FXMLLoader.load(getClass().getResource("MenuBar.fxml"));
+	} catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	drawer.setSidePane(box);
+	HamburgerBackArrowBasicTransition ham = new HamburgerBackArrowBasicTransition(hamburger);
+	ham.setRate(-1);
+	hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e)->{
+		ham.setRate(ham.getRate() * -1);
+		ham.play();
+		if(drawer.isHidden()){
+			drawer.open();
+		}else{
+			drawer.close();
+		}
+	});
+		
+	}
+
+}

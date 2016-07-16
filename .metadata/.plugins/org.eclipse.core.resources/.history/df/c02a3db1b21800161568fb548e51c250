@@ -1,0 +1,11 @@
+package application;
+
+import javafx.event.ActionEvent;
+
+public class Controller {
+
+	public void exit(ActionEvent event){
+		System.exit(0);
+	}
+
+}

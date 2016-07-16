@@ -1,0 +1,38 @@
+package Controllers;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+public class Controller_Main {
+	@FXML TextField emailText;
+	@FXML PasswordField passwordText;
+	@FXML TableView<groupLink> GroupList;
+	@FXML TableColumn<groupLink,String> GroupName;
+	@FXML TableColumn<groupLink,String> GroupUrl;
+	@FXML TableView<friendLink> FriendList;
+	@FXML TableColumn<friendLink,String> FriendName;
+	@FXML TableColumn<friendLink,String> FriendUrl;
+
+	
+
+	public void Open(ActionEvent e){
+		System.out.println(emailText.getText());
+
+		Options option = new Options(emailText.getText(),passwordText.getText());
+		System.out.println(emailText.getText());
+		
+		GroupName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		GroupUrl.setCellValueFactory(new PropertyValueFactory<>("url"));
+		GroupList.setItems(option.getGroupList());
+		FriendName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		FriendUrl.setCellValueFactory(new PropertyValueFactory<>("url"));
+		FriendList.setItems(option.getFriendList());
+		System.out.println("Done !");
+	}
+
+}

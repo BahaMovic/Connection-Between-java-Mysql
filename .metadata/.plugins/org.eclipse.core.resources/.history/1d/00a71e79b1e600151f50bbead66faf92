@@ -1,0 +1,55 @@
+package test;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+public class test extends JFrame{
+	
+	private int[] Array= new int[100];
+	private int arraySize = 10;
+	public test(){
+		for(int i=0;i<arraySize;i++){
+			Array[i]= (int)(Math.random()*10+10);
+		}
+		
+	}
+	public void print(){
+		for(int i=0;i<arraySize;i++){
+			System.out.println("| "+i+" | "+Array[i]+" |");
+		}
+	}
+	public int ValueIn(int x){
+		if(x<arraySize) return Array[x];
+		
+		return 0;
+	}
+	public boolean Search(int x){
+		boolean b = false;
+		for(int i=0 ; i<arraySize;i++){
+			if(x==Array[i]){
+				b = true;
+			}
+		}
+		return b;
+	}
+	public void DeleteIn(int index){
+		if(index<arraySize){
+			
+			for(int i=index ;i<(arraySize);i++){
+				Array[i]=Array[i+1];
+			}
+		}
+	}
+	public static void main(String[] args){
+		test t = new test();
+		t.print();
+		System.out.println(t.ValueIn(4));
+		System.out.println(t.Search(18));
+		t.DeleteIn(6);
+		t.print();
+
+	}
+
+
+}

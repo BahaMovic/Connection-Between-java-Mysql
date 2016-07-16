@@ -1,0 +1,10 @@
+package Objects;
+
+public class GroupJoiner extends FaceBookList{
+
+	public GroupJoiner(String email, String password) {
+		super(email, password);
+		// TODO Auto-generated constructor stub
+	}
+
+}

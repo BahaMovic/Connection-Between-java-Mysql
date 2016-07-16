@@ -1,0 +1,12 @@
+package test;
+
+public class test {
+	public int x;
+	public test(){};
+	public test(int x){this.x =x};
+	public static void main(String[] args){
+		int x = 0;
+		System.out.println(x);
+	}
+
+}

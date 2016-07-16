@@ -1,0 +1,19 @@
+package test;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+public class test extends JFrame{
+	
+	static final int xa= 12;
+	public static void main(String[] args){
+	
+	System.out.println(xa);
+	xa = 15;
+	System.out.println(xa);
+
+	}
+
+
+}

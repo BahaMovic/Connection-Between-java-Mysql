@@ -1,0 +1,20 @@
+import java.awt.BorderLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class TextPanel extends JPanel{
+	JTextArea tx;
+	public TextPanel(){
+		tx = new JTextArea();
+		setLayout(new BorderLayout());
+		add(new JScrollPane(tx), BorderLayout.CENTER);
+		
+	}
+
+	public void appendText(String s){
+		tx.append(s);
+	}
+}

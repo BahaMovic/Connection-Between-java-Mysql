@@ -1,0 +1,11 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Movic extends JFrame{
+	
+	public static void main(String[] args){
+		DisplayMode dm = new DisplayMode(600,500,16,DisplayMode.REFRESH_RATE_UNKNOWN);
+		Movic mov = new Movic();
+	}
+
+}

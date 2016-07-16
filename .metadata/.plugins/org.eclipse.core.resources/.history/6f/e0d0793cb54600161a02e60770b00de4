@@ -1,0 +1,19 @@
+package application;
+
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+
+public class Controller {
+	 @FXML
+	    private AnchorPane main;
+
+	    @FXML
+	    private JFXHamburger button;
+
+	    @FXML
+	    private JFXDrawer drawer;
+
+}

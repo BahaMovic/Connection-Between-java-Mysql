@@ -1,0 +1,23 @@
+import java.sql.*;
+
+import javax.swing.JOptionPane;
+public class Main {
+	static Connection con = null;
+	public static void function(){
+		try{
+			
+			con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\BahaMovic\\Desktop\\Sqlite\\Student.sqlite");
+			
+			if(!con.isClosed()){
+				JOptionPane.showMessageDialog(null,"Connection is opened");
+			}else{
+				JOptionPane.showMessageDialog(null, "Connection is Closed");
+			}
+			}catch(Exception e){
+				System.out.println("Hello "+e);
+			}
+	}
+public static void main(String[] args){
+	function();
+}
+}

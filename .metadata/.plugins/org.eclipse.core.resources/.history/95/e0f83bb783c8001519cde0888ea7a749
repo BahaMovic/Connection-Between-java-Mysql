@@ -1,0 +1,21 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+public class Game extends JPanel{
+	public Game(){
+		
+	}
+	
+	public static void main(String[] args){
+		
+		JFrame frame = new JFrame();
+		frame.setSize(new Dimension(500,400));
+		frame.setPreferredSize(new Dimension(500,400));
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.pack();
+		frame.setResizable(false);
+		frame.setVisible(true);
+	}
+
+}

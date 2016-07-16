@@ -1,0 +1,20 @@
+
+public class Coin {
+	private int Position ;
+	private int Weight;
+	public int getPosition() {
+		return Position;
+	}
+	public void setPosition(int position) {
+		Position = position;
+	}
+	public int getWeight() {
+		return Weight;
+	}
+	public void setWeight(int weight) {
+		Weight = weight;
+	}
+	
+	
+
+}

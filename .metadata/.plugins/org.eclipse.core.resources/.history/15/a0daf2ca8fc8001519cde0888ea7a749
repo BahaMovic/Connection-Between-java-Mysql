@@ -1,0 +1,25 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Player extends Entity{
+int xd , yd;
+	public Player(int x, int y) {
+		super(x, y);
+		w = 16 ;
+		h = 16;
+	}
+	public void draw(Graphics g){
+		g.setColor(Color.GRAY);
+		g.fillOval(x, y, w, h);
+		
+	}
+	public void move(){
+		x += xd;
+		y += yd;
+	}
+	public void getXD(int value)
+	{
+		
+	}
+
+}
